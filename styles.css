@@ -1,34 +1,39 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900';
+@import 'https://fonts.googleapis.com/css?family=Bebas+Neue:400,500,600,700,900';
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900';
 
 :root {
     --primary-color: #FFFFFF;
     --secondary-color: #e7b6b6;
-    --tertiary-color: #e08686;
+    --tertiary-color: #E86C6C;
+    --background-color: #F4E6DB;
   }
 
 * {
-    font-family: Roboto;
+    font-family: Montserrat;
     font-size: 20px;
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 }
 
 /* Main Div Styles */
 
 .main-div {
-    background-color: var(--secondary-color);
     border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 5px;
+    width: fit-content;
+    margin: 0 auto 10px auto;
 }
+
 h1 {
     text-align: center;
-    font-family: Montserrat;
-    font-size: 2em;
-    color: var(--primary-color);
+    padding: 5px;
+
+    font-family: "Bebas Neue";
+    font-size: 3em;
+    color: var(--tertiary-color);
+
+
 }
 
 /* Suggested Recipes Styles */
@@ -45,6 +50,9 @@ h2 {
     background-color: var(--secondary-color);
     border-radius: 5px;
     color: var(--primary-color);
+
+    max-width: calc(280px*3);
+    margin: auto;
 }
 
 .recipes-list {
@@ -54,7 +62,9 @@ h2 {
     margin: 0;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, 290px);    
+    grid-template-columns: repeat(auto-fill, 280px);    
+    row-gap: 15px;
+
     justify-content: center;
     text-align: center;
 
@@ -64,14 +74,26 @@ h2 {
     border: 1px solid;
     margin: 0 15px;
     background-color: white;
-    border-radius: 1cqh;
-
+    border-radius: 10px;
+    padding: 2px 0;
+    transition: 0.5s;
+}
+.recipe:hover {
+    transform: scale(105%);
+    cursor: not-allowed;
 }
 
 .recipe li {
     padding: 10px 0;
-    margin-bottom: 10px;
-    border-bottom: 3px double var(--secondary-color);
+    margin: 0 2px 10px 2px;
+
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    font-size: 0.8em;
 }
 
 .recipe a {
@@ -79,17 +101,30 @@ h2 {
     color: var(--tertiary-color);
     font-weight: 500;
 }
-.recipe a:hover {
-    color: rgb(139, 139, 233);
-    transition: 0.5s;
-}
 
 img {
     width: 240px;
+    height: 175px;
     margin: 0;
     padding: 0 0 2px 0;
     border-radius: 5px;
 }
-img:hover {
-    transform: scale(105%);
+
+/* REST OF STYLES */
+.footer {
+    width: fit-content;
+    margin: 50px auto;
+    background-color: #ffffff;
+
+    display: flex;
+    border: 2px solid;
+    flex-direction: column;
+    align-items: center;
+}
+.footer p {
+    font-weight: 600;
+}
+.footer img {
+    width: 400px;
+    height: auto;
 }
