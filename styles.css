@@ -1,0 +1,95 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900';
+
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #e7b6b6;
+    --tertiary-color: #e08686;
+  }
+
+* {
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+/* Main Div Styles */
+
+.main-div {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+h1 {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+/* Suggested Recipes Styles */
+
+h2 {
+    padding: 5px;
+    padding-top: 10px;
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.recipes-holder {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+}
+
+.recipes-list {
+    list-style-type: none;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 290px);    
+    justify-content: center;
+    text-align: center;
+
+}
+
+.recipe {
+    border: 1px solid;
+    margin: 0 15px;
+    background-color: white;
+    border-radius: 1cqh;
+
+}
+
+.recipe li {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 3px double var(--secondary-color);
+}
+
+.recipe a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    font-weight: 500;
+}
+.recipe a:hover {
+    color: rgb(139, 139, 233);
+    transition: 0.5s;
+}
+
+img {
+    width: 240px;
+    margin: 0;
+    padding: 0 0 2px 0;
+    border-radius: 5px;
+}
+img:hover {
+    transform: scale(105%);
+}
